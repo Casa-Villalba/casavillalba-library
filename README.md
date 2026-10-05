@@ -28,7 +28,7 @@ La estructura del repositorio se mantiene deliberadamente mínima:
 ```text
 casavillalba-library/
 ├── README.md
-└── LICENSE
+└── LICENSE.md    # cuando se defina la política general de derechos
 ```
 
 Los archivos PDF y EPUB no se almacenan normalmente mediante commits dentro del repositorio.
@@ -135,19 +135,19 @@ Los archivos publicados mediante GitHub Releases pueden enlazarse directamente d
 La estructura general es:
 
 ```text
-https://github.com/despegaa-com/casavillalba-library/releases/download/{release}/{archivo}
+https://github.com/Casa-Villalba/casavillalba-library/releases/download/{release}/{archivo}
 ```
 
 Ejemplo:
 
 ```text
-https://github.com/despegaa-com/casavillalba-library/releases/download/cv-001/seleccion-poetica.pdf
+https://github.com/Casa-Villalba/casavillalba-library/releases/download/cv-001/seleccion-poetica.pdf
 ```
 
 y:
 
 ```text
-https://github.com/despegaa-com/casavillalba-library/releases/download/cv-001/seleccion-poetica.epub
+https://github.com/Casa-Villalba/casavillalba-library/releases/download/cv-001/seleccion-poetica.epub
 ```
 
 Estas URLs pueden utilizarse directamente desde el catálogo de Casa Villalba.
@@ -160,7 +160,7 @@ Por ejemplo:
   formato: 'pdf',
   estado: 'disponible',
   descargaUrl:
-    'https://github.com/despegaa-com/casavillalba-library/releases/download/cv-001/seleccion-poetica.pdf',
+    'https://github.com/Casa-Villalba/casavillalba-library/releases/download/cv-001/seleccion-poetica.pdf',
 }
 ```
 
@@ -227,11 +227,15 @@ Las estadísticas pertenecen al archivo concreto del Release y no deben consider
 
 Este repositorio contiene únicamente los archivos de distribución editorial.
 
-El sitio web, sus componentes, datos editoriales y lógica de aplicación se mantienen en:
+El sitio web, sus componentes, datos editoriales y lógica de aplicación se mantienen en un repositorio independiente.
+
+Actualmente:
 
 ```text
 despegaa-com/casavillalba
 ```
+
+Si el repositorio principal del sitio se traslada en el futuro a la organización `Casa-Villalba`, esta referencia deberá actualizarse.
 
 La separación es intencional:
 
@@ -282,13 +286,24 @@ Las condiciones aplicables a cada publicación deberán indicarse en el propio l
 
 Salvo que una publicación indique expresamente lo contrario, no debe asumirse que todos los materiales editoriales de Casa Villalba se encuentran bajo dominio público o bajo una licencia abierta.
 
-## Licencia del repositorio
+## Licencia y derechos
 
 La existencia pública de este repositorio facilita el acceso y la descarga de las publicaciones, pero no concede por sí misma derechos adicionales sobre las obras o elementos editoriales incluidos en los archivos.
 
-Las condiciones de uso y distribución de cada publicación se determinan individualmente.
+Las condiciones de uso, copia, modificación y redistribución pueden variar entre publicaciones.
 
-Consulte los créditos y avisos legales incluidos en cada edición.
+Cada edición deberá indicar, cuando corresponda:
+
+- el estado legal de la obra original;
+- los derechos aplicables a la traducción;
+- los derechos sobre textos editoriales;
+- los derechos sobre ilustraciones y fotografías;
+- los derechos sobre diseño, portada y maquetación;
+- cualquier licencia específica aplicable a la edición.
+
+Hasta que exista una política general de licenciamiento para Casa Villalba, las condiciones deberán consultarse en los créditos, avisos legales y notas correspondientes a cada publicación.
+
+La marca, identidad visual y logotipos de **Casa Villalba Editorial** no se consideran licenciados para reutilización por el mero hecho de encontrarse en un repositorio público.
 
 ---
 
