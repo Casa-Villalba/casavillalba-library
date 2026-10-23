@@ -6,6 +6,8 @@ Este repositorio funciona como biblioteca de archivos para las publicaciones dig
 
 El código del sitio web de Casa Villalba se mantiene en un repositorio independiente.
 
+**Para preparar y publicar un EPUB o PDF:** consulta la [guía de publicación](docs/publicar-edicion.md). La primera ficha preparada es **cv-001 — Selección poética**, de Sor Juana Inés de la Cruz.
+
 ## Casa Villalba Editorial
 
 Casa Villalba es un proyecto editorial dedicado a preparar, editar y publicar obras literarias y de pensamiento, con especial atención a textos clásicos y de dominio público.
@@ -28,12 +30,20 @@ La estructura del repositorio se mantiene deliberadamente mínima:
 ```text
 casavillalba-library/
 ├── README.md
-└── LICENSE.md    # cuando se defina la política general de derechos
+├── docs/publicar-edicion.md
+├── ediciones/catalogo.json
+├── ediciones/cv-001.md
+├── scripts/preparar-ediciones.py
+└── .github/workflows/preparar-ediciones.yml
 ```
 
 Los archivos PDF y EPUB no se almacenan normalmente mediante commits dentro del repositorio.
 
 Se publican como archivos adjuntos de cada Release.
+
+Las fichas de `ediciones/` contienen únicamente los datos y notas de las publicaciones. Una acción de GitHub prepara los borradores pendientes; los archivos finales se adjuntan y se publican después de revisarlos. No se necesitan instalaciones para seguir este proceso desde el navegador.
+
+Un borrador no es una publicación disponible. Las descargas de la web se activan por formato después de comprobar los adjuntos públicos.
 
 ## Publicaciones
 
