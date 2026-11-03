@@ -4,6 +4,11 @@
       "id": "cv-001",
       "titulo": "Selección poética — Sor Juana Inés de la Cruz",
       "notas": "ediciones/cv-001.md"
+    },
+    {
+      "id": "cv-002",
+      "titulo": "La metamorfosis — Franz Kafka",
+      "notas": "ediciones/cv-002.md"
     }
   ]
 }

@@ -23,11 +23,29 @@ Puedes publicar el EPUB primero y añadir el PDF más adelante. Cada formato se 
 
 Estas URLs no funcionan mientras el Release sea un borrador o falte el adjunto correspondiente. No uses `/releases/latest/download/`: cada libro tiene su propia etiqueta.
 
+## Segunda publicación: cv-002 — La metamorfosis
+
+Esta edición se prepara mediante `ediciones/cv-002.md` y su entrada en `ediciones/catalogo.json`. Al fusionar el PR en `main`, la acción **Preparar ediciones** creará un **borrador** del Release `cv-002` si aún no existe. No publica el libro ni adjunta archivos.
+
+1. Revisa en [Releases](https://github.com/Casa-Villalba/casavillalba-library/releases) el borrador **La metamorfosis — Franz Kafka**, con etiqueta `cv-002`. Si la acción aún no lo creó, consulta **Actions → Preparar ediciones**.
+2. Renombra el EPUB final a **`la-metamorfosis.epub`**.
+3. Abre **Edit** en el borrador y adjunta `la-metamorfosis.epub` en **Attach binaries**. **No lo subas mediante un commit/push a `main` ni a `ediciones/`**: los libros terminados viven como archivos del Release.
+4. Comprueba la cubierta, los enlaces del índice y las notas en un lector EPUB. Revisa las notas del Release para que solo anuncien los formatos realmente adjuntos.
+5. Pulsa **Publish release** cuando estés conforme y prueba la descarga sin iniciar sesión.
+6. Actualiza por separado el catálogo de la web de Casa Villalba para activar el EPUB. El PDF se puede adjuntar y activar después, sin modificar el identificador de la edición.
+
+| Formato | Archivo | URL pública después de publicar y adjuntar el archivo |
+| --- | --- | --- |
+| EPUB | `la-metamorfosis.epub` | `https://github.com/Casa-Villalba/casavillalba-library/releases/download/cv-002/la-metamorfosis.epub` |
+| PDF (cuando exista) | `la-metamorfosis.pdf` | `https://github.com/Casa-Villalba/casavillalba-library/releases/download/cv-002/la-metamorfosis.pdf` |
+
+**Importante:** el catálogo web aún debe configurarse para CV002; registrar esta publicación en la biblioteca no crea automáticamente el botón de descarga en `casavillalba.com`.
+
 ## Habilitar la descarga en Casa Villalba
 
-En `despegaa-com/casavillalba`, abre `src/shared/data/book.data.ts` y busca la edición concreta: `cv-001-epub` o `cv-001-pdf`.
+En `despegaa-com/casavillalba`, abre `src/shared/data/book.data.ts`. Para CV001 existen las entradas `cv-001-epub` y `cv-001-pdf`. Para CV002 tendrás que incorporar `cv-002-epub` (y, más adelante, `cv-002-pdf`) con su correspondiente `descargaUrl`.
 
-Después de comprobar su descarga pública, cambia únicamente el `estado` de ese formato de `en-preparacion` a `disponible`. El campo `descargaUrl` ya apunta al adjunto de GitHub. El cambio debe publicarse en la web para que aparezca el botón.
+Después de comprobar la descarga pública de cada formato, configura su `estado` como `disponible` y enlázalo a su adjunto de GitHub. Si la entrada ya existe en la web y está en `en-preparacion`, bastará cambiar ese estado; si todavía no existe (como en CV002), primero habrá que crearla. El cambio debe publicarse en la web para que aparezca el botón.
 
 El estado general del libro y el de cada formato son independientes. Un EPUB publicado no habilita automáticamente el PDF ni anuncia una edición impresa.
 
