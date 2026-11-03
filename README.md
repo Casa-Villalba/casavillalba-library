@@ -6,7 +6,7 @@ Este repositorio funciona como biblioteca de archivos para las publicaciones dig
 
 El código del sitio web de Casa Villalba se mantiene en un repositorio independiente.
 
-**Para preparar y publicar un EPUB o PDF:** consulta la [guía de publicación](docs/publicar-edicion.md). La primera ficha preparada es **cv-001 — Selección poética**, de Sor Juana Inés de la Cruz.
+**Para preparar y publicar un EPUB o PDF:** consulta la [guía de publicación](docs/publicar-edicion.md). Las fichas preparadas son **cv-001 — Selección poética**, de Sor Juana Inés de la Cruz, y **cv-002 — La metamorfosis**, de Franz Kafka.
 
 ## Casa Villalba Editorial
 
@@ -33,6 +33,7 @@ casavillalba-library/
 ├── docs/publicar-edicion.md
 ├── ediciones/catalogo.json
 ├── ediciones/cv-001.md
+├── ediciones/cv-002.md
 ├── scripts/preparar-ediciones.py
 └── .github/workflows/preparar-ediciones.yml
 ```
@@ -74,6 +75,13 @@ seleccion-poetica.epub
 ```
 
 De esta forma, cada título puede localizarse y mantenerse independientemente.
+
+Fichas editoriales preparadas:
+
+- [cv-001 · Selección poética — Sor Juana Inés de la Cruz](ediciones/cv-001.md)
+- [cv-002 · La metamorfosis — Franz Kafka](ediciones/cv-002.md)
+
+La presencia de una ficha en el catálogo no significa que el Release esté publicado ni que sus archivos estén disponibles.
 
 ## Convención de Releases
 
